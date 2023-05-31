@@ -252,4 +252,10 @@ app.listen(app.get('port'), () => {
   console.log('Press CTRL-C to stop');
 });
 
+if (process.env.DRYRUNSECURITY === 'true') {
+  const dryrun = require('@dryrunsec/dryrun_node');
+  app.locals.drAppPath = __dirname;
+  dryrun.dryrun(app);
+}
+
 module.exports = app;
