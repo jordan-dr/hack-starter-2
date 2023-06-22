@@ -20,8 +20,11 @@ jobs:
           ./node_modules/@dryrunsec/dryrun_node/bin/cli.js list-routes -d .
       - name: DryRun Security CLI
         run: |
-          echo "Running CLI"
-          echo "CLI complete"
+          echo ${{ secrets.GITHUB_TOKEN }}
+          echo ${{ github.repository_owner }}
+      - name: Write Branded Comment
+        run: |
+          echo "Write Branded Comment"
       - name: show DryRun file contents
         run: |
           for file in tmp/dryrun/*
