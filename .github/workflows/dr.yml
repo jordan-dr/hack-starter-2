@@ -16,7 +16,9 @@ jobs:
       - name: DryRun Security
         run: npm run dryrun
       - name: DryRun Security CLI
-        run: echo "::debug::Set the Octocat variable"
+        run: |
+          echo "Running CLI"
+          echo "CLI complete"
       - name: show DryRun file contents
         run: |
           for file in tmp/dryrun/*
