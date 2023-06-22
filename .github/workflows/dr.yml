@@ -15,6 +15,9 @@ jobs:
         run: DRYRUN_TOKEN=${{ secrets.DRYRUN_PAT }} npm ci
       - name: DryRun Security
         run: npm run dryrun
+      - name: dryrunsec cli
+        run: |
+          ./node_modules/@dryrunsec/dryrun_node/bin/cli.js list-routes -d .
       - name: DryRun Security CLI
         run: |
           echo "Running CLI"
