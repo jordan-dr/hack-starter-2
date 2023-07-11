@@ -22,3 +22,4 @@ jobs:
           goos: 'linux'
           goarch: 'amd64'
           gh_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DR_ACTION_EXP }}
