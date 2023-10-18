@@ -1,5 +1,6 @@
 /**
  * GET /
+ * this is a test
  * Home page.
  */
 exports.index = (req, res) => {
